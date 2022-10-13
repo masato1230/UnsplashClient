@@ -1,4 +1,4 @@
-package com.example.unsplashclient.ui.theme
+package com.example.unsplashclient.presentation.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
