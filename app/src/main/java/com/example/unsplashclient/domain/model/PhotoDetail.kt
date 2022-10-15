@@ -7,6 +7,5 @@ data class PhotoDetail(
     val photographer: String,
     val camera: String,
     val location: String,
-    val views: Int,
     val downloads: Int,
 )

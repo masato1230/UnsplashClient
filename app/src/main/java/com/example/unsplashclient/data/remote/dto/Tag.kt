@@ -6,7 +6,5 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class Tag(
-    val source: Source,
-    val title: String,
-    val type: String
+    val title: String
 )

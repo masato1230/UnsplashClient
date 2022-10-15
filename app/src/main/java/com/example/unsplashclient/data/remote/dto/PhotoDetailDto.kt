@@ -7,15 +7,13 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class PhotoDetailDto(
-    @Json(name = "alt_description")
-    val altDescription: String,
     @Json(name = "blur_hash")
     val blurHash: String,
     val color: String,
     @Json(name = "created_at")
     val createdAt: String,
     @Json(name = "current_user_collections")
-    val currentUserCollections: List<Any>,
+    val currentUserCollections: List<CurrentUserCollection>,
     val description: String,
     val downloads: Int,
     val exif: Exif,
@@ -26,25 +24,13 @@ data class PhotoDetailDto(
     val likes: Int,
     val links: LinksXX,
     val location: Location,
-    val meta: Meta,
-    @Json(name = "promoted_at")
-    val promotedAt: Any,
     @Json(name = "public_domain")
     val publicDomain: Boolean,
-    @Json(name = "related_collections")
-    val relatedCollections: RelatedCollections,
-    val sponsorship: Any,
-    val tags: List<TagX>,
-    @Json(name = "tags_preview")
-    val tagsPreview: List<TagsPreview>,
-    @Json(name = "topic_submissions")
-    val topicSubmissions: TopicSubmissionsXXXX,
-    val topics: List<Any>,
+    val tags: List<Tag>,
     @Json(name = "updated_at")
     val updatedAt: String,
-    val urls: UrlsXXXXXX,
-    val user: UserXXXXXX,
-    val views: Int,
+    val urls: UrlsX,
+    val user: UserX,
     val width: Int
 )
 
@@ -55,8 +41,7 @@ fun PhotoDetailDto.toPhotoDetail(): PhotoDetail {
         imageUrl = urls.raw,
         photographer = user.username,
         camera = exif.name,
-        location = "${location.name}, ${location.city}, ${location.country}",
-        views = views,
+        location = "${location.city}, ${location.country}",
         downloads = downloads,
     )
 }
