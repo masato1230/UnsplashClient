@@ -41,7 +41,7 @@ fun UnsplashClientTheme(
     }
 
     rememberSystemUiController().setStatusBarColor(
-        color = if (darkTheme) Color.DarkGray else Color.White,
+        color = if (darkTheme) Color.Black else Color.White,
         darkIcons = !darkTheme,
     )
 
