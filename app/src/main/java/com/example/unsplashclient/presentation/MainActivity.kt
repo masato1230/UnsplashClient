@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     ) {
                         // 画像検索画面
                         composable(route = ScreenRoute.SearchPhotoScreen.route) {
-                            SearchPhotosScreen()
+                            SearchPhotosScreen(navController)
                         }
 
                         // 画像詳細表示画面
