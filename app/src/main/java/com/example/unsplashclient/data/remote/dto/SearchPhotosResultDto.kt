@@ -7,20 +7,20 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class SearchPhotosResultDto(
-    val results: List<Result>,
-    val total: Int,
+    val results: List<Result>?,
+    val total: Int?,
     @Json(name = "total_pages")
-    val totalPages: Int
+    val totalPages: Int?
 )
 
 fun SearchPhotosResultDto.toPhotos(): List<Photo> {
-    return results.map {
+    return results!!.map {
         Photo(
-            photoId = it.id,
+            photoId = it.id!!,
             description = it.description,
             likes = it.likes,
-            imageUrl = it.urls.raw,
-            photographer = it.user.username,
+            imageUrl = it.urls!!.raw!!,
+            photographer = it.user?.username,
         )
     }
 }

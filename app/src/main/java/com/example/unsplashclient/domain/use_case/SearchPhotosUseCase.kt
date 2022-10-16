@@ -18,6 +18,7 @@ class SearchPhotosUseCase @Inject constructor(
             val photos = repository.searchPhotos(query).toPhotos()
             emit(NetworkResponse.Success<List<Photo>>(photos))
         } catch(e: Exception) {
+            e.printStackTrace()
             emit(NetworkResponse.Failure<List<Photo>>(e.message.toString()))
         }
     }

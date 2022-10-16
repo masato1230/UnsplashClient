@@ -7,19 +7,19 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class User(
     @Json(name = "first_name")
-    val firstName: String,
-    val id: String,
+    val firstName: String?,
+    val id: String?,
     @Json(name = "instagram_username")
-    val instagramUsername: String,
+    val instagramUsername: String?,
     @Json(name = "last_name")
-    val lastName: String,
-    val links: LinksX,
-    val name: String,
+    val lastName: String?,
+    val links: LinksX?,
+    val name: String?,
     @Json(name = "portfolio_url")
-    val portfolioUrl: String,
+    val portfolioUrl: String?,
     @Json(name = "profile_image")
-    val profileImage: ProfileImage,
+    val profileImage: ProfileImage?,
     @Json(name = "twitter_username")
-    val twitterUsername: String,
-    val username: String
+    val twitterUsername: String?,
+    val username: String?
 )

@@ -6,9 +6,9 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class LinksXX(
-    val download: String,
+    val download: String?,
     @Json(name = "download_location")
-    val downloadLocation: String,
-    val html: String,
-    val self: String
+    val downloadLocation: String?,
+    val html: String?,
+    val self: String?
 )
