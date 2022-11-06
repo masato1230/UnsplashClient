@@ -20,7 +20,7 @@ class SearchPhotosViewModel @Inject constructor(
     val state: State<SearchPhotosState> = _state
 
     init {
-        searchPhotos("oosaka")
+        searchPhotos("programming")
     }
 
     fun searchPhotos(query: String) {
