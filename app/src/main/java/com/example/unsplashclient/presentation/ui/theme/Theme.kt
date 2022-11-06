@@ -1,4 +1,4 @@
-package com.example.unsplashclient.ui.theme
+package com.example.unsplashclient.presentation.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
