@@ -6,11 +6,11 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.unsplashclient.presentation.photo_detail.PhotoDetailScreen
 import com.example.unsplashclient.presentation.search_photos.SearchPhotosScreen
 import com.example.unsplashclient.presentation.ui.theme.UnsplashClientTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
                         }
                         // 画像詳細表示画面
                         composable(route = ScreenRoute.PhotoDetailScreen.route + "/{photoId}") {
-                            Text(text = "画像詳細表示画面")
+                            PhotoDetailScreen()
                         }
                     }
                 }
