@@ -4,7 +4,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
@@ -17,6 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.example.unsplashclient.domain.model.Photo
+import com.example.unsplashclient.presentation.components.CountLabel
 import com.example.unsplashclient.presentation.ui.theme.UnsplashClientTheme
 
 @Composable
@@ -58,16 +58,10 @@ fun PhotoThumbnail(
                 )
             }
             Spacer(modifier = Modifier.weight(1f))
-            Icon(
+            CountLabel(
                 imageVector = Icons.Default.Favorite,
-                contentDescription = "likes",
-                tint = Color.Magenta,
-            )
-            Spacer(modifier = Modifier.width(5.dp))
-            Text(
-                text = photo.likes.toString(),
-                color = Color.White,
-                style = MaterialTheme.typography.body1,
+                count = photo.likes ?: 0,
+                iconTint = Color.Magenta,
             )
         }
     }
