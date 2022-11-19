@@ -62,6 +62,7 @@ fun PhotoThumbnail(
                 imageVector = Icons.Default.Favorite,
                 count = photo.likes ?: 0,
                 iconTint = Color.Magenta,
+                color = Color.White,
             )
         }
     }
